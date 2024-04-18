@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>basic :: Frontend Open Source</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<!-- / -> 필수 -->
+</head>
+
+<body>
+	<!-- <p><%= JSON.stringify(items) %></p>  -->
+	<!-- 오브젝트 불러오기 (전체 데이터 가져왔음) -->
+
+<div class="wrapper">
+	<section id="area1">
+		<div class="list clearfix">
+			<ul>
+				 <% for(let i=0; i<items.length; i++){ %>
+					<li>
+						<h3><%= items[i].title %></h3> 
+					<div class="content">
+						<a href="">
+							<div class="pic"><img src="/images/<%= items[i].path %>" alt=<%= items[i].alt %>></div>
+							<div class="dese">
+								<p><%= items[i].p %></p>
+								<span><%= items[i].span %></span>
+							</div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li>
+					</li>
+				<% } %> 
+<!-- 				 
+				 <% for(let i=0; i<items.length; i++){ %>  
+					<li><%= i %></li>
+				<% } %>  
+				<li>
+					<h3>Academy</h3> 
+					<div class="content">
+						<a href="">
+							<div class="pic"><img src="/images/academy.png" alt="academy"></div>
+							<div class="dese">
+								<p>비트코인 비주얼리제이션 워크숍</p>
+								<span>2018.01.21(Sun) / 10:00-17:00</span>
+							</div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<h3>Upcoming Project</h3>
+					<div class="content">
+						<a href="">
+							<div class="pic"><img src="/images/upcoming.png" alt="upcoming"></div>
+							<div class="dese">
+								<p>Artist Talk Kyle Mcdonald</p>
+								<span>2018.02.23(Fri) / 19:00-21:30</span>
+							</div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<h3>Archive</h3>
+					<div class="content">
+						<a href="">
+							<div class="pic"><img src="/images/archive.png" alt="archive"></div>
+							<div class="dese">
+								<p>People / Creator Database</p>
+								<span>Workspace-Unlimited</span>
+							</div>
+							<div class="dim">+</div>
+							<div class="choice"></div>
+						</a>
+					</div>
+				</li> 
+		
+			</ul>
+		</div>
+	</section>
+</div>
+</body>
+</html>
